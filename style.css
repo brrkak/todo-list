@@ -1,0 +1,195 @@
+body {
+  background-size: cover;
+  font-family: "Tektur", cursive;
+  color: #f1f1f1;
+}
+
+.container {
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+}
+
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -100;
+  height: 100%;
+  width: 100%;
+}
+/* user-name 창 */
+
+.welcome__form,
+.welcome__form--input--label,
+.welcome__form--input {
+  align-self: flex-start;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1.2rem 0rem;
+  text-align: center;
+}
+
+.welcome__form {
+  display: flex;
+  align-self: flex-start;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__form__username {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+}
+
+.welcome__form--input {
+  border: none;
+  border-bottom: 3px solid white;
+  background: none;
+  padding-top: 50px;
+}
+
+.welcome__form--input::placeholder,
+.welcome__form--input:focus {
+  outline: none;
+  color: white;
+  background: none;
+}
+
+/* to-do 창 */
+
+.afterLogin__form {
+  display: flex;
+  flex-direction: column;
+
+  /* font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    padding-top: 60px;
+    padding-right: 150px; */
+}
+
+.afterLogin__form > #currentClock {
+  display: flex;
+  text-align: right;
+
+  font-size: 50px;
+  padding-top: 50px;
+  padding-right: 50px;
+  margin: 0;
+}
+
+.currentDate {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: "맑은고딕";
+}
+
+.weather {
+  text-align: right;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.hello {
+  text-align: left;
+  padding-left: 50px;
+  font-size: 50px;
+}
+
+.todo-input {
+  display: flex;
+  align-self: center;
+  width: 25%;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 1em;
+
+  border-radius: 1rem;
+}
+
+.list-container {
+  display: block;
+  align-self: center;
+  font-family: sans-serif;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 500px;
+  height: 456px;
+  font-size: 23px;
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 10px;
+  padding: 13px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  top: 25px;
+  left: 2px;
+}
+
+#todo-list {
+  padding: 12px 30px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#todo-list > li {
+  padding: 12px 30px;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#todo-list > li > button {
+  border: none;
+  font-size: 22px;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.list-container::-webkit-scrollbar {
+  width: 10px;
+  /* animation: none 1s ease-in-out; */
+  /* display: none; */
+}
+/* Track */
+.list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.list-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.list-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
