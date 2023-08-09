@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+ 
+    <main class="container">
+      <!-- user-name 창-->
+
+      <form class="welcome__form">
+        <div class="welcome__form__username">
+          <label class="welcome__form--input--label"
+            >Hello! What's your Name?</label
+          >
+
+          <input
+            class="welcome__form--input"
+            type="text"
+            placeholder="Your NickName"
+            maxlength="15"
+            id="greeting"
+          />
+        </div>
+      </form>
+
+      <!-- - after Login 창-->
+
+      <form class="afterLogin__form hidden">
+        <div class="time"></div>
+        <h1 class="afterLogin__form" id="currentClock">00: 00: 00</h1>
+        <p class="currentDate">aaa 00 bbb 0000</p>
+        <p class="weather">weather</p>
+      </form>
+
+      <form class="afterLogin__form hidden" id="todo-form">
+        <div class="hello">hello</div>
+        <input
+          class="todo-input"
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          required
+        />
+      </form>
+      <div class="list-container hidden">
+        <ul id="todo-list"></ul>
+      </div>
+     
+    </main>
+    <script src="login.js" ut charset="utf-8"></script>
+    <script src="time.js" ut charset="utf-8"></script>
+    <script src="todolist.js" ut charset="utf-8"></script>
+    <script src="weather.js" ut charset="utf-8"></script>
+    <script src="background.js" ut charset="utf-8"></script>  
+
+  </body>
+</html>
